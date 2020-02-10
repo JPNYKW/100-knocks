@@ -1,13 +1,8 @@
 fn main() {
     let s = "パタトクカシーー".to_string();
     let mut t = String::new();
-    let mut i = 0;
 
-    for c in s.as_str().chars() {
-        i += 1;
-        if i % 2 > 0 { t = format!("{}{}", t, c); }
-    }
-
+    for i in 0..s.chars().count() { if i % 2 > 0 { t = format!("{}{}", t, s.chars().nth(i).unwrap()); } }
     println!("{}", t);
 }
 
